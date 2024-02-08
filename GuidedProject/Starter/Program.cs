@@ -14,12 +14,10 @@ string menuSelection = "";
 // array used to store runtime data, there is no persisted data
 string[,] ourAnimals = new string[maxPets, 6];
 
-// TODO: Convert the if-elseif-else construct to a switch statement
-
 // create some initial ourAnimals array entries
 for (int i = 0; i < maxPets; i++)
 {
-    switch (i) 
+    switch (i)
     {
         case 0:
             animalSpecies = "dog";
@@ -47,7 +45,7 @@ for (int i = 0; i < maxPets; i++)
             animalPersonalityDescription = "friendly";
             animalNickname = "Puss";
             break;
-        
+
         case 3:
             animalSpecies = "cat";
             animalID = "c4";
@@ -77,7 +75,9 @@ for (int i = 0; i < maxPets; i++)
 }
 
 // display the top-level menu options
-
+do {
+    
+} while (menuSelection != null);
 Console.Clear();
 
 Console.WriteLine("Welcome to the Contoso PetFriends app. Your main menu options are:");
