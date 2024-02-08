@@ -1,4 +1,6 @@
 // the ourAnimals array will store the following: 
+using System.Runtime.Versioning;
+
 string animalSpecies = "";
 string animalID = "";
 string animalAge = "";
@@ -96,8 +98,6 @@ Console.WriteLine(" 8. Display all dogs with a specified characteristic");
 Console.WriteLine();
 Console.WriteLine("Enter your selection number (or type Exit to exit the program)");
 
-
-
 readResult = Console.ReadLine();
 if (readResult != null)
 {
@@ -113,25 +113,31 @@ if (readResult != null)
 switch(menuSelection)
 {
     case "1": 
-        Console.WriteLine($"You selected feature number {menuSelection}");
+        // List all of our current pet information
+        for (int i = 0; i < maxPets; i++) 
+        {
+
+        }
         Console.WriteLine("Press the Enter key to continue.");
         readResult = Console.ReadLine();
         break;
 
     case "2": 
+        // Add a new animal friend to the ourAnimals array
         Console.WriteLine($"You selected feature number {menuSelection}");
         Console.WriteLine("Press the Enter key to continue.");
         readResult = Console.ReadLine();
         break;
 
     case "3": 
-    // Ensure animal ages and physical descriptions are complete
+        // Ensure animal ages and physical descriptions are complete
         Console.WriteLine($"You selected feature number {menuSelection}");
         Console.WriteLine("Press the Enter key to continue.");
         readResult = Console.ReadLine();
         break;
 
     case "4": 
+        // Ensure animal nicknames and personality descriptions are complete
         Console.WriteLine($"You selected feature number {menuSelection}");
         Console.WriteLine("Press the Enter key to continue.");
         readResult = Console.ReadLine();
@@ -167,6 +173,5 @@ switch(menuSelection)
     
     default:
         break;
-
-
 }
+
