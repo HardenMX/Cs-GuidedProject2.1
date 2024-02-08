@@ -75,9 +75,13 @@ for (int i = 0; i < maxPets; i++)
 }
 
 // display the top-level menu options
-do {
+// do {
+//     // pause code execution
+//     readResult = Console.ReadLine();
     
-} while (menuSelection != null);
+// } 
+// while (menuSelection != null);
+
 Console.Clear();
 
 Console.WriteLine("Welcome to the Contoso PetFriends app. Your main menu options are:");
@@ -92,16 +96,77 @@ Console.WriteLine(" 8. Display all dogs with a specified characteristic");
 Console.WriteLine();
 Console.WriteLine("Enter your selection number (or type Exit to exit the program)");
 
+
+
 readResult = Console.ReadLine();
 if (readResult != null)
 {
-    menuSelection = readResult.ToLower();
+    menuSelection = readResult.ToLower().Trim();
 }
 
-Console.WriteLine($"You selected menu option {menuSelection}.");
-Console.WriteLine("Press the Enter key to continue");
+//Console.WriteLine($"You selected menu option {menuSelection}.");
+//Console.WriteLine("Press the Enter key to continue");
 
 // pause code execution
-readResult = Console.ReadLine();
+//readResult = Console.ReadLine();
+
+switch(menuSelection)
+{
+    case "1": 
+        Console.WriteLine($"You selected feature number {menuSelection}");
+        Console.WriteLine("Press the Enter key to continue.");
+        readResult = Console.ReadLine();
+        break;
+
+    case "2": 
+        Console.WriteLine($"You selected feature number {menuSelection}");
+        Console.WriteLine("Press the Enter key to continue.");
+        readResult = Console.ReadLine();
+        break;
+
+    case "3": 
+    // Ensure animal ages and physical descriptions are complete
+        Console.WriteLine($"You selected feature number {menuSelection}");
+        Console.WriteLine("Press the Enter key to continue.");
+        readResult = Console.ReadLine();
+        break;
+
+    case "4": 
+        Console.WriteLine($"You selected feature number {menuSelection}");
+        Console.WriteLine("Press the Enter key to continue.");
+        readResult = Console.ReadLine();
+        break;
+
+    case "5": 
+        Console.WriteLine($"You selected feature number {menuSelection}");
+        Console.WriteLine("UNDER CONSTRUCTION - please check back next month to see progress.");
+        Console.WriteLine("Press the Enter key to continue.");
+        readResult = Console.ReadLine();
+        break;
+
+    case "6": 
+        Console.WriteLine($"You selected feature number {menuSelection}");
+        Console.WriteLine("UNDER CONSTRUCTION - please check back next month to see progress.");
+        Console.WriteLine("Press the Enter key to continue.");
+        readResult = Console.ReadLine();
+        break;
+
+    case "7": 
+        Console.WriteLine($"You selected feature number {menuSelection}");
+        Console.WriteLine("UNDER CONSTRUCTION - please check back next month to see progress.");
+        Console.WriteLine("Press the Enter key to continue.");
+        readResult = Console.ReadLine();
+        break;
+
+    case "8": 
+        Console.WriteLine($"You selected feature number {menuSelection}");
+        Console.WriteLine("UNDER CONSTRUCTION - please check back next month to see progress.");
+        Console.WriteLine("Press the Enter key to continue.");
+        readResult = Console.ReadLine();
+        break;
+    
+    default:
+        break;
 
 
+}
