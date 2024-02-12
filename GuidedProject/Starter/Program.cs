@@ -116,6 +116,14 @@ switch(menuSelection)
         // List all of our current pet information
         for (int i = 0; i < maxPets; i++) 
         {
+            if (ourAnimals[i, 0] != "ID #: ")
+            {
+                Console.WriteLine();
+                for (int j = 0; j < 6; j++) 
+                {
+                    Console.WriteLine(ourAnimals[i, j]);
+                }
+            }
 
         }
         Console.WriteLine("Press the Enter key to continue.");
