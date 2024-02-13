@@ -1,3 +1,5 @@
+using static myFunctions; 
+
 // the ourAnimals array will store the following: 
 using System.Runtime.Versioning;
 
@@ -66,7 +68,6 @@ for (int i = 0; i < maxPets; i++)
             animalNickname = "";
             break;
     }
-
     ourAnimals[i, 0] = "ID #: " + animalID;
     ourAnimals[i, 1] = "Species: " + animalSpecies;
     ourAnimals[i, 2] = "Age: " + animalAge;
@@ -75,19 +76,7 @@ for (int i = 0; i < maxPets; i++)
     ourAnimals[i, 5] = "Personality: " + animalPersonalityDescription;
 }
 
-Console.Clear();
-
-Console.WriteLine("Welcome to the Contoso PetFriends app. Your main menu options are:");
-Console.WriteLine(" 1. List all of our current pet information");
-Console.WriteLine(" 2. Add a new animal friend to the ourAnimals array");
-Console.WriteLine(" 3. Ensure animal ages and physical descriptions are complete");
-Console.WriteLine(" 4. Ensure animal nicknames and personality descriptions are complete");
-Console.WriteLine(" 5. Edit an animal’s age");
-Console.WriteLine(" 6. Edit an animal’s personality description");
-Console.WriteLine(" 7. Display all cats with a specified characteristic");
-Console.WriteLine(" 8. Display all dogs with a specified characteristic");
-Console.WriteLine();
-Console.WriteLine("Enter your selection number (or type Exit to exit the program)");
+myFunctions.ConsoleIntro();
 
 readResult = Console.ReadLine();
 if (readResult != null)
@@ -134,7 +123,7 @@ switch(menuSelection)
         while (anotherPet == "y" && petCount < maxPets)
         {
             bool validEntry = false;
-
+            //input dog or catt...
             do
             {
                 Console.WriteLine("\n\rEnter 'dog' or 'cat' to begin a new entry");
@@ -156,7 +145,7 @@ switch(menuSelection)
             } while (validEntry == false);
 
             animalID = animalSpecies.Substring(0, 1) + (petCount + 1).ToString();
-
+            //get pet's age
             do
             { 
                 int petAge;
@@ -240,6 +229,10 @@ switch(menuSelection)
                     if (readResult != null)
                     {
                         anotherPet = readResult.ToLower();
+                        if (readResult == "n") 
+                        {
+                            continue;
+                        }
                     }
 
                 } while (anotherPet != "y" && anotherPet != "n");
